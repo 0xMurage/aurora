@@ -1,0 +1,11 @@
+<ng-container *ngIf="isAuthenticated;else unauthenticated">
+  <aurora-authenticated>
+    <router-outlet></router-outlet>
+  </aurora-authenticated>
+</ng-container>
+
+<ng-template #unauthenticated>
+  <aurora-unauthenticated>
+    <router-outlet></router-outlet>
+  </aurora-unauthenticated>
+</ng-template>
